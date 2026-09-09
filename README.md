@@ -1,4 +1,4 @@
-# EXP — INTERFACING A 16×2 LCD WITH ARDUINO USING AN I2C MODULE FOR SENSOR DATA DISPLAY
+ # EXP — INTERFACING A 16×2 LCD WITH ARDUINO USING AN I2C MODULE FOR SENSOR DATA DISPLAY
 
 ## Aim
 
@@ -48,8 +48,25 @@ To interface a **16×2 LCD display with Arduino using an I2C module** and displa
 7. The readings are periodically updated.
 
 ## Arduino Program
+#include <LiquidCrystal.h>
+
+// LCD pins: RS, EN, D4, D5, D6, D7
+LiquidCrystal lcd(7, 6, 5, 4, 3, 2);
+
+void setup() {
+  lcd.begin(16, 2);
+
+  lcd.setCursor(0, 0);
+  lcd.print("EMBEDDED");
+}
+
+void loop() {
+  
+}
 
 ## Observation
+<img width="1600" height="719" alt="image" src="https://github.com/user-attachments/assets/950b687e-0a85-4f1e-8237-11237ee8e459" />
+
 
 ## Result
 
